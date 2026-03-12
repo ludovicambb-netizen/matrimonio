@@ -98,4 +98,153 @@
             padding: 30px;
             border-radius: 2px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-            margin-top: 20px
+            margin-top: 20px;
+            border: 1px solid #e0dbd0;
+            text-align: left;
+        }
+
+        .accommodation-item {
+            margin-bottom: 25px;
+            border-bottom: 1px dotted #e0dbd0;
+            padding-bottom: 15px;
+        }
+
+        .accommodation-item:last-child { border-bottom: none; }
+
+        .hotel-name { font-size: 1.4rem; font-weight: 600; color: var(--verde-salvia); text-decoration: none; }
+        .details { font-size: 1rem; color: #777; font-style: italic; }
+        .distance { font-weight: 600; color: var(--testo); }
+
+        .contact-link {
+            color: var(--verde-salvia);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+
+        .btn-maps {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--verde-salvia);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#weekend">Weekend</a>
+        <a href="#programma">Sabato</a>
+        <a href="#dormire">Dormire</a>
+        <a href="#rsvp">RSVP</a>
+    </nav>
+
+    <section id="home">
+        <p style="text-transform: uppercase; letter-spacing: 2px;">Ginevra e Riccardo annunciano il matrimonio dei loro genitori</p>
+        <span class="corsivo">Ludovica & Dario</span>
+        <h2>Sabato 11 Luglio</h2>
+        <p>Ore 16:30 | Borgo di Elcito</p>
+        <div class="divider"></div>
+        <p style="font-style: italic; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+            Ci scambieremo le promesse nella cornice di Elcito con una cerimonia simbolica che celebrerà la nostra unione.
+        </p>
+    </section>
+
+    <section id="weekend" style="background-color: #f9f7f2;">
+        <h2>Il Programma del Weekend</h2>
+        <div style="margin-bottom: 30px;">
+            <span class="corsivo" style="font-size: 2.2rem;">Venerdì 10 Luglio</span>
+            <p>Festeggeremo con due aperitivi separati:<br>
+            <strong>Aperitivo della Sposa</strong> & <strong>Aperitivo dello Sposo</strong></p>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <span class="corsivo" style="font-size: 2.2rem;">Domenica 12 Luglio</span>
+            <p>Pranzo conviviale in mezzo al <strong>Monte San Vicino</strong> presso il <strong>Centro Ippico dal Gaucho</strong>.<br>
+            Opzionale: passeggiata a cavallo per i più temerari.</p>
+            <a href="https://www.google.com/maps/place/Il+Gaucho+Centro+Ippico/@43.3315759,13.0759083,17z/data=!4m14!1m7!3m6!1s0x132dc72ce8100053:0x3c32852070467341!2sIl+Gaucho+Centro+Ippico!8m2!3d43.331572!4d13.0784832!16s%2Fg%2F11g1z3k59w!3m5!1s0x132dc72ce8100053:0x3c32852070467341!8m2!3d43.331572!4d13.0784832!16s%2Fg%2F11g1z3k59w?entry=ttu&g_ep=EgoyMDI2MDMxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn-maps">📍 Naviga verso il Gaucho</a>
+        </div>
+    </section>
+
+    <section id="programma">
+        <h2>Il Giorno del Matrimonio</h2>
+        <p><strong>16:30</strong> – Cerimonia presso il Borgo di Elcito</p>
+        <p><strong>18:30</strong> – Aperitivo e Ricevimento presso "La Serra" (Staffolo)</p>
+        <div class="divider"></div>
+        <img src="2.png" alt="Mappa del matrimonio" class="mappa-img">
+        <div style="margin-top: 20px;">
+            <a href="https://maps.google.com/?q=Borgo+di+Elcito" target="_blank" class="btn-maps">📍 Naviga verso Elcito</a>
+            <a href="https://maps.google.com/?q=La+Serra+Staffolo" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Naviga verso La Serra</a>
+        </div>
+    </section>
+
+    <section id="dormire">
+        <h2>Dove Dormire</h2>
+        <div class="info-box">
+            <div class="accommodation-item">
+                <a href="https://www.bedandbreakfast.eu/it/a/FGWIma7y0BJl/bb-la-fonte" target="_blank" class="hotel-name">B&B La Fonte</a>
+                <div class="details">B&B • ★ 5.0 — <span class="distance">3-5 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.relaisdelborgo.com/" target="_blank" class="hotel-name">Relais del Borgo</a>
+                <div class="details">Hotel & Spa • ★ 4.5 — <span class="distance">5 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.fattoriafontegeloni.it/it/" target="_blank" class="hotel-name">Fattoria Fontegeloni</a>
+                <div class="details">Agriturismo • ★ 4.8 — <span class="distance">10-12 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lavecchiafonte.it/" target="_blank" class="hotel-name">La Vecchia Fonte</a>
+                <div class="details">Agriturismo • ★ 4.9 — <span class="distance">12-15 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lepiaggeagriturismo.it/" target="_blank" class="hotel-name">Agriturismo Le Piagge</a>
+                <div class="details">Agriturismo • ★ 4.6 — <span class="distance">10-12 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.quivoglio.com/" target="_blank" class="hotel-name">Agriturismo Qui Voglio</a>
+                <div class="details">Agriturismo • ★ 4.9 — <span class="distance">8 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lesinante.it/" target="_blank" class="hotel-name">L'esinante</a>
+                <div class="details">Agriturismo — <span class="distance">16 min</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rsvp">
+        <h2>RSVP</h2>
+        <p>Vi preghiamo di confermare entro il <strong>30 Maggio</strong>.</p>
+        <div style="margin-top: 30px;">
+            <p>Scriveteci o chiamateci per confermare e segnalare eventuali intolleranze:</p>
+            <p style="margin: 20px 0;">
+                <strong>Dario:</strong> <a href="tel:+393420492495" class="contact-link">342 0492495</a>
+            </p>
+            <p style="margin: 20px 0;">
+                <strong>Ludovica:</strong> <a href="tel:+393490651539" class="contact-link">349 0651539</a>
+            </p>
+            <p style="font-size: 0.95rem; margin-top: 40px; opacity: 0.8; font-style: italic;">
+                * Data la natura della location e lo stile dell'evento, abbiamo immaginato un ricevimento per soli adulti. Speriamo che possiate godervi questa serata di relax insieme a noi.
+            </p>
+        </div>
+        <div class="divider" style="margin-top: 60px;"></div>
+        <h2>Lista di Nozze</h2>
+        <p>La vostra presenza è il dono più grande. Se desiderate farci un pensiero:</p>
+        <p><strong>IBAN:</strong> IT 00 X 00000 00000 000000000000</p>
+    </section>
+
+    <footer style="text-align: center; padding: 40px 0; color: var(--verde-salvia); font-size: 0.9rem;">
+        LUDOVICA & DARIO — 11.07.2026
+    </footer>
+</div>
+
+</body>
+</html>
