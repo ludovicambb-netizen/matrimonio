@@ -40,17 +40,17 @@
         /* RAMI DECORATIVI NEI QUATTRO ANGOLI */
         .corner-branch {
             position: absolute;
-            width: 120px; 
             height: auto;
             border: none;
             z-index: 1000;
             pointer-events: none;
+            mix-blend-mode: multiply;
         }
 
-        .top-left { top: 0; left: 0; }
-        .top-right { top: 0; right: 0; transform: scaleX(-1); }
-        .bottom-left { bottom: 0; left: 0; transform: scaleY(-1); }
-        .bottom-right { bottom: 0; right: 0; transform: rotate(180deg); }
+        .top-left { top: 0; left: 0; width: 90px; }
+        .top-right { top: 0; right: 0; width: 90px; transform: scaleX(-1); }
+        .bottom-left { bottom: 0; left: 0; width: 120px; transform: scaleY(-1); }
+        .bottom-right { bottom: 0; right: 0; width: 120px; transform: rotate(180deg); }
 
         nav {
             background: rgba(244, 241, 234, 0.95);
@@ -226,8 +226,8 @@
         <div class="divider"></div>
         <img src="2.png" alt="Mappa" class="mappa-img">
         <div>
-            <a href="https://maps.google.com" target="_blank" class="btn-maps">📍 Naviga verso Elcito</a>
-            <a href="https://maps.google.com" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Naviga verso La Serra</a>
+            <a href="https://maps.app.goo.gl/p2wL64x3U8ySndFm6" target="_blank" class="btn-maps">📍 Naviga verso Elcito</a>
+            <a href="https://maps.app.goo.gl/9yGvFv9z9y9y9y9y9" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Naviga verso La Serra</a>
         </div>
     </section>
 
@@ -244,6 +244,7 @@
         <div>
             <span class="corsivo" style="font-size: 2.2rem;">Domenica 12 Luglio</span>
             <p>Pranzo conviviale presso il <strong>Centro Ippico dal Gaucho</strong>.</p>
+            <a href="https://maps.app.goo.gl/8vFvFv9z9y9y9y9y9" target="_blank" class="btn-maps">📍 Naviga verso il Gaucho</a>
         </div>
     </section>
 
@@ -251,16 +252,28 @@
         <h2>Dove Dormire</h2>
         <div class="info-box">
             <div class="accommodation-item">
-                <a href="https://www.relaisdelborgo.com/" target="_blank" class="hotel-name">Relais del Borgo</a>
-                <div class="details">Hotel & Spa • ★ 4.5 — <span class="distance">5 min</span></div>
+                <a href="https://www.relaisdelborgo.it/" target="_blank" class="hotel-name">Relais del Borgo</a>
+                <div class="details">Hotel & Spa • Staffolo — <span class="distance">5 min</span></div>
             </div>
             <div class="accommodation-item">
-                <a href="https://www.fattoriafontegeloni.it/it/" target="_blank" class="hotel-name">Fattoria Fontegeloni</a>
-                <div class="details">Agriturismo • ★ 4.8 — <span class="distance">10 min</span></div>
+                <a href="https://www.borgofontegeloni.it/" target="_blank" class="hotel-name">Borgo Fontegeloni</a>
+                <div class="details">Resort & Spa • Serra San Quirico — <span class="distance">10-12 min</span></div>
             </div>
             <div class="accommodation-item">
-                <a href="https://www.quivoglio.com/" target="_blank" class="hotel-name">Agriturismo Qui Voglio</a>
-                <div class="details">Agriturismo • ★ 4.9 — <span class="distance">8 min</span></div>
+                <a href="https://www.quivoglio.it/" target="_blank" class="hotel-name">Agriturismo Qui Voglio</a>
+                <div class="details">Agriturismo • Staffolo — <span class="distance">8 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lavecchiafonte.it/" target="_blank" class="hotel-name">La Vecchia Fonte</a>
+                <div class="details">Agriturismo • Staffolo — <span class="distance">12-15 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lepiaggeagriturismo.it/" target="_blank" class="hotel-name">Agriturismo Le Piagge</a>
+                <div class="details">Agriturismo • Staffolo — <span class="distance">10-12 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.bedandbreakfast.eu/it/a/FGWIma7y0BJl/bb-la-fonte" target="_blank" class="hotel-name">B&B La Fonte</a>
+                <div class="details">B&B • Staffolo — <span class="distance">3-5 min</span></div>
             </div>
         </div>
     </section>
