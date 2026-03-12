@@ -6,21 +6,118 @@
     <title>Ludovica & Dario - 11 Luglio</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --verde-salvia: #7a8d75; --crema: #f4f1ea; --testo: #4a4a4a; --sfondo: #e0dbd0; }
-        body { margin: 0; padding: 20px; font-family: 'Cormorant Garamond', serif; background-color: var(--sfondo); color: var(--testo); display: flex; justify-content: center; }
-        .main-container { background-color: var(--crema); border: 2px solid var(--verde-salvia); max-width: 800px; width: 100%; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        nav { background: var(--crema); padding: 20px 0; text-align: center; border-bottom: 1px solid var(--verde-salvia); position: sticky; top: 0; z-index: 100; }
-        nav a { margin: 0 10px; text-decoration: none; color: var(--verde-salvia); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; }
-        section { padding: 60px 20px; text-align: center; }
-        h2 { font-family: 'Cormorant Garamond', serif; color: var(--verde-salvia); text-transform: uppercase; letter-spacing: 2px; }
-        .corsivo { font-family: 'Dancing Script', cursive; font-size: 3rem; color: var(--verde-salvia); display: block; margin: 10px 0; }
-        .divider { width: 60px; height: 1px; background: var(--verde-salvia); margin: 20px auto; }
-        .info-box { background: white; padding: 30px; border: 1px solid #e0dbd0; margin-top: 20px; }
-        .mappa-img { max-width: 100%; height: auto; border: 1px solid var(--verde-salvia); margin: 20px 0; }
-        .contact { font-size: 1.3rem; color: var(--verde-salvia); text-decoration: none; font-weight: bold; }
+        :root {
+            --verde-salvia: #7a8d75;
+            --crema: #f4f1ea;
+            --testo: #4a4a4a;
+            --sfondo-body: #e0dbd0;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--sfondo-body);
+            color: var(--testo);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            scroll-behavior: smooth;
+        }
+
+        .main-container {
+            background-color: var(--crema);
+            border: 2px solid var(--verde-salvia);
+            border-radius: 2px;
+            max-width: 850px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        nav {
+            background: rgba(244, 241, 234, 0.95);
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--verde-salvia);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: var(--verde-salvia);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        section {
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--verde-salvia);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .corsivo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: var(--verde-salvia);
+            display: block;
+            margin: 10px 0;
+        }
+
+        .divider {
+            width: 80px;
+            height: 1px;
+            background: var(--verde-salvia);
+            margin: 30px auto;
+        }
+
+        .info-box {
+            background: white;
+            padding: 30px;
+            border-radius: 2px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            margin-top: 20px;
+            border: 1px solid #e0dbd0;
+            text-align: left;
+        }
+
+        .accommodation-item {
+            margin-bottom: 25px;
+            border-bottom: 1px dotted #e0dbd0;
+            padding-bottom: 15px;
+        }
+
+        .accommodation-item:last-child { border-bottom: none; }
+
+        .hotel-name { font-size: 1.4rem; font-weight: 600; color: var(--verde-salvia); text-decoration: none; }
+        .details { font-size: 1rem; color: #777; font-style: italic; }
+        .distance { font-weight: 600; color: var(--testo); }
+
+        .contact-link {
+            color: var(--verde-salvia);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
+        
+        .mappa-img { max-width: 100%; height: auto; margin: 20px 0; border: 1px solid #e0dbd0; }
     </style>
 </head>
 <body>
+
 <div class="main-container">
     <nav>
         <a href="#home">Home</a>
@@ -29,44 +126,97 @@
         <a href="#dormire">Dormire</a>
         <a href="#rsvp">RSVP</a>
     </nav>
+
     <section id="home">
-        <p style="letter-spacing: 2px;">Ginevra e Riccardo annunciano il matrimonio dei loro genitori</p>
+        <p style="text-transform: uppercase; letter-spacing: 2px;">Ginevra e Riccardo annunciano il matrimonio dei loro genitori</p>
         <span class="corsivo">Ludovica & Dario</span>
         <h2>Sabato 11 Luglio</h2>
         <p>Ore 16:30 | Borgo di Elcito</p>
         <div class="divider"></div>
-        <p style="font-style: italic;">Ci scambieremo le promesse nella cornice di Elcito con una cerimonia simbolica che celebrerà la nostra unione, avvenuta formalmente qualche giorno prima.</p>
-        <p style="font-size: 0.8rem; margin-top: 20px; opacity: 0.7;">* Ricevimento per soli adulti</p>
+        <p style="font-style: italic; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+            Ci scambieremo le promesse nella cornice di Elcito con una cerimonia simbolica che celebrerà la nostra unione, avvenuta formalmente qualche giorno prima.
+        </p>
+        <p style="font-size: 0.9rem; margin-top: 30px; opacity: 0.8;">
+            * Data la natura della location e lo stile dell'evento, abbiamo immaginato un ricevimento per soli adulti.
+        </p>
     </section>
+
     <section id="weekend" style="background-color: #f9f7f2;">
-        <h2>Il Weekend</h2>
-        <span class="corsivo" style="font-size: 2rem;">Venerdì 10 Luglio</span>
-        <p>Aperitivo della Sposa & Aperitivo dello Sposo</p>
+        <h2>Il Programma del Weekend</h2>
+        <div style="margin-bottom: 30px;">
+            <span class="corsivo" style="font-size: 2.2rem;">Venerdì 10 Luglio</span>
+            <p>Festeggeremo con due aperitivi separati:<br>
+            <strong>Aperitivo della Sposa</strong> & <strong>Aperitivo dello Sposo</strong></p>
+        </div>
         <div class="divider"></div>
-        <span class="corsivo" style="font-size: 2rem;">Domenica 12 Luglio</span>
-        <p>Pranzo al Monte San Vicino e passeggiata a cavallo</p>
-    </section>
-    <section id="programma">
-        <h2>Sabato 11 Luglio</h2>
-        <p><strong>16:30</strong> – Cerimonia ad Elcito</p>
-        <p><strong>18:30</strong> – Ricevimento a "La Serra" (Staffolo)</p>
-        <img src="2.jpg" alt="Mappa" class="mappa-img">
-    </section>
-    <section id="dormire">
-        <h2>Dove Dormire</h2>
-        <div class="info-box">
-            <p>B&B La Fonte | Relais del Borgo | Fattoria Fontegeloni | La Vecchia Fonte | Le Piagge | La Distesa | L'Isola che non c'era | Qui Voglio</p>
+        <div>
+            <span class="corsivo" style="font-size: 2.2rem;">Domenica 12 Luglio</span>
+            <p>Pranzo conviviale in mezzo al <strong>Monte San Vicino</strong>.<br>
+            Opzionale: passeggiata a cavallo per i più temerari.</p>
         </div>
     </section>
+
+    <section id="programma">
+        <h2>Il Giorno del Matrimonio</h2>
+        <p><strong>16:30</strong> – Cerimonia presso il Borgo di Elcito</p>
+        <p><strong>18:30</strong> – Aperitivo e Ricevimento presso "La Serra" (Staffolo)</p>
+        <div class="divider"></div>
+        <img src="2.jpg" alt="Mappa del matrimonio" class="mappa-img">
+    </section>
+
+    <section id="dormire">
+        <h2>Dove Dormire</h2>
+        <p>Alcuni suggerimenti per il vostro soggiorno (distanze calcolate dal Ricevimento):</p>
+        <div class="info-box">
+            <div class="accommodation-item">
+                <a href="https://www.bedandbreakfast.eu/it/a/FGWIma7y0BJl/bb-la-fonte" target="_blank" class="hotel-name">B&B La Fonte</a>
+                <div class="details">B&B • ★ 5.0 — <span class="distance">3-5 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.relaisdelborgo.com/" target="_blank" class="hotel-name">Relais del Borgo</a>
+                <div class="details">Hotel & Spa • ★ 4.5 — <span class="distance">5 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.fattoriafontegeloni.it/it/" target="_blank" class="hotel-name">Fattoria Fontegeloni</a>
+                <div class="details">Agriturismo • ★ 4.8 — <span class="distance">10-12 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lavecchiafonte.it/" target="_blank" class="hotel-name">La Vecchia Fonte</a>
+                <div class="details">Agriturismo • ★ 4.9 — <span class="distance">12-15 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lepiaggeagriturismo.it/" target="_blank" class="hotel-name">Agriturismo Le Piagge</a>
+                <div class="details">Agriturismo • ★ 4.6 — <span class="distance">10-12 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.quivoglio.com/" target="_blank" class="hotel-name">Agriturismo Qui Voglio</a>
+                <div class="details">Agriturismo • ★ 4.9 — <span class="distance">8 min</span></div>
+            </div>
+            <div class="accommodation-item">
+                <a href="https://www.lesinante.it/" target="_blank" class="hotel-name">L'esinante</a>
+                <div class="details">Agriturismo — <span class="distance">16 min</span></div>
+            </div>
+        </div>
+    </section>
+
     <section id="rsvp">
         <h2>RSVP</h2>
-        <p>Confermare entro il 30 Maggio a:</p>
-        <p>Dario: <a href="tel:+393420492495" class="contact">342 0492495</a></p>
-        <p>Ludovica: <a href="tel:+393490651539" class="contact">349 0651539</a></p>
-        <div class="divider" style="margin-top: 40px;"></div>
+        <p>Vi preghiamo di confermare entro il <strong>30 Maggio</strong>.</p>
+        <div class="info-box" style="text-align: center;">
+            <p>Scriveteci o chiamateci per confermare e segnalare eventuali intolleranze:</p>
+            <p><strong>Dario:</strong> <a href="tel:+393420492495" class="contact-link">342 0492495</a></p>
+            <p><strong>Ludovica:</strong> <a href="tel:+393490651539" class="contact-link">349 0651539</a></p>
+        </div>
+        <div class="divider" style="margin-top: 60px;"></div>
         <h2>Lista di Nozze</h2>
-        <p>IBAN: IT 00 X 00000 00000 000000000000</p>
+        <p>La vostra presenza è il dono più grande. Se desiderate farci un pensiero:</p>
+        <p><strong>IBAN:</strong> IT 00 X 00000 00000 000000000000</p>
     </section>
+
+    <footer style="text-align: center; padding: 40px 0; color: var(--verde-salvia); font-size: 0.9rem;">
+        LUDOVICA & DARIO — 11.07.2026
+    </footer>
 </div>
+
 </body>
 </html>
