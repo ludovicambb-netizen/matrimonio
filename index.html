@@ -31,22 +31,25 @@
             max-width: 850px;
             width: 100%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            position: relative;
+            position: relative; /* Importante per posizionare le foglie */
             padding: 5px;
         }
 
-        /* RAMI DECORATIVI - Tutti interni al container per stabilità */
+        /* --- FOGLIE DECORATIVE NEI QUATTRO ANGOLI --- */
         .corner-branch {
             position: absolute;
             height: auto;
             border: none;
-            pointer-events: none; /* Fondamentale per far funzionare i link sotto */
-            mix-blend-mode: multiply;
-            z-index: 50; /* Sotto il menu, sopra il testo */
+            z-index: 200; /* Stanno sopra il testo ma sotto il menu sticky */
+            pointer-events: none; /* Fondamentale: i click passano attraverso le foglie */
+            mix-blend-mode: multiply; /* Effetto trasparenza sulla carta */
         }
 
+        /* Foglie in alto (absolute) */
         .top-left { top: 0; left: 0; width: 90px; }
         .top-right { top: 0; right: 0; width: 90px; transform: scaleX(-1); }
+
+        /* Foglie in basso (absolute) */
         .bottom-left { bottom: 0; left: 0; width: 120px; transform: scaleY(-1); }
         .bottom-right { bottom: 0; right: 0; width: 120px; transform: rotate(180deg); }
 
@@ -55,6 +58,7 @@
             padding: 20px 0;
             text-align: center;
             border-bottom: 1px solid var(--verde-salvia);
+            position: -webkit-sticky; 
             position: sticky;
             top: 0;
             z-index: 1000; /* Il menu sta sopra a tutto */
@@ -73,7 +77,7 @@
         section {
             padding: 60px 30px;
             text-align: center;
-            scroll-margin-top: 80px;
+            scroll-margin-top: 80px; /* Spazio per non coprire i titoli con il menu */
         }
 
         h2 {
@@ -130,7 +134,9 @@
         .accommodation-item:last-child { border-bottom: none; }
 
         .hotel-name { font-size: 1.2rem; font-weight: 600; color: var(--verde-salvia); text-decoration: none; }
-        
+        .details { font-size: 0.95rem; color: #777; font-style: italic; }
+        .distance { font-weight: 600; color: var(--testo); }
+
         .btn-maps {
             display: inline-block;
             padding: 12px 24px;
@@ -146,7 +152,16 @@
 
         ul.regali-simbolici { list-style: none; padding: 0; text-align: center; }
         ul.regali-simbolici li { margin-bottom: 15px; border-bottom: 1px dotted var(--verde-salvia); padding-bottom: 10px; }
+        ul.regali-simbolici li:last-child { border-bottom: none; }
         .regalo-titolo { display: block; font-weight: 600; color: var(--verde-salvia); font-size: 1.1rem; }
+        .regalo-desc { font-size: 0.9rem; font-style: italic; color: #666; }
+
+        .contact-link {
+            color: var(--verde-salvia);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.4rem;
+        }
 
         footer {
             text-align: center;
@@ -156,12 +171,13 @@
             letter-spacing: 2px;
         }
 
+        /* OTTIMIZZAZIONE MOBILE */
         @media (max-width: 600px) {
-            nav { padding: 15px 10px; }
-            nav a { margin: 0 5px; font-size: 0.7rem; }
+            nav { padding: 15px 45px; }
+            nav a { margin: 0 5px; font-size: 0.7rem; letter-spacing: 0.5px; }
+            footer { padding: 120px 60px 40px 60px; font-size: 0.75rem; }
             .top-left, .top-right { width: 70px; }
-            .bottom-left, .bottom-right { width: 90px; }
-            footer { padding: 120px 20px 40px 20px; font-size: 0.75rem; }
+            .bottom-left, .bottom-right { width: 100px; }
         }
     </style>
 </head>
@@ -202,8 +218,8 @@
         <div class="divider"></div>
         <img src="2.png" alt="Mappa" class="mappa-img">
         <div>
-            <a href="https://maps.app.goo.gl/Yf7Gg" target="_blank" class="btn-maps">📍 Naviga verso Elcito</a>
-            <a href="https://maps.app.goo.gl/Zp8Hh" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Naviga verso La Serra</a>
+            <a href="https://maps.app.goo.gl/ChIJi82FRpXALRMRvmwabeRI_mE" target="_blank" class="btn-maps">📍 Naviga verso Elcito</a>
+            <a href="https://maps.app.goo.gl/location_placeholder_staffolo" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Naviga verso La Serra</a>
         </div>
     </section>
 
@@ -227,11 +243,11 @@
     <section id="dormire">
         <h2>Dove Dormire</h2>
         <div class="info-box">
-            <div class="accommodation-item"><a href="https://www.relaisdelborgo.it/" class="hotel-name" target="_blank">Relais del Borgo</a><div class="details">Hotel & Spa • Staffolo — 5 min</div></div>
-            <div class="accommodation-item"><a href="https://www.borgofontegeloni.it/" class="hotel-name" target="_blank">Borgo Fontegeloni</a><div class="details">Resort & Spa • 10-12 min</div></div>
-            <div class="accommodation-item"><a href="https://www.quivoglio.it/" class="hotel-name" target="_blank">Agriturismo Qui Voglio</a><div class="details">Agriturismo • 8 min</div></div>
-            <div class="accommodation-item"><a href="https://www.lavecchiafonte.it/" class="hotel-name" target="_blank">La Vecchia Fonte</a><div class="details">Agriturismo • 12-15 min</div></div>
-            <div class="accommodation-item"><a href="https://www.villadeisignorelli.it/" class="hotel-name" target="_blank">Villa dei Signorelli</a><div class="details">Country House • 10 min</div></div>
+            <div class="accommodation-item"><a href="https://www.relaisdelborgo.it/" class="hotel-name" target="_blank">Relais del Borgo</a><div class="details">Hotel & Spa • Staffolo — <span class="distance">5 min</span></div></div>
+            <div class="accommodation-item"><a href="https://www.borgofontegeloni.it/" class="hotel-name" target="_blank">Borgo Fontegeloni</a><div class="details">Resort & Spa • <span class="distance">10-12 min</span></div></div>
+            <div class="accommodation-item"><a href="https://www.quivoglio.it/" class="hotel-name" target="_blank">Agriturismo Qui Voglio</a><div class="details">Agriturismo • <span class="distance">8 min</span></div></div>
+            <div class="accommodation-item"><a href="https://www.lavecchiafonte.it/" class="hotel-name" target="_blank">La Vecchia Fonte</a><div class="details">Agriturismo • <span class="distance">12-15 min</span></div></div>
+            <div class="accommodation-item"><a href="https://www.villadeisignorelli.it/" class="hotel-name" target="_blank">Villa dei Signorelli</a><div class="details">Country House • <span class="distance">10 min</span></div></div>
             <div class="accommodation-item"><a href="https://www.bb-viamazzini.it/" class="hotel-name" target="_blank">B&B Via Mazzini</a><div class="details">B&B • Staffolo Centro</div></div>
         </div>
     </section>
@@ -246,27 +262,32 @@
         <img src="casale.png" alt="Casale" class="casale-img">
         <div class="info-box" style="background: rgba(255,255,255,0.5);">
             <ul class="regali-simbolici">
-                <li><span class="regalo-titolo">Un albero di arancio o di ulivo</span></li>
-                <li><span class="regalo-titolo">Un mattone per il grande camino</span></li>
-                <li><span class="regalo-titolo">Una luce in giardino</span></li>
-                <li><span class="regalo-titolo">Un metro quadro di cotto o pietra</span></li>
+                <li><span class="regalo-titolo">Un albero di arancio o di ulivo</span><span class="regalo-desc">Per veder crescere radici forti nel nostro nuovo giardino.</span></li>
+                <li><span class="regalo-titolo">Un mattone per il grande camino</span><span class="regalo-desc">Per riscaldare i nostri futuri inverni in famiglia.</span></li>
+                <li><span class="regalo-titolo">Una luce in giardino</span><span class="regalo-desc">Per illuminare le lunghe tavolate delle nostre cene estive.</span></li>
+                <li><span class="regalo-titolo">Un metro quadro di cotto o pietra</span><span class="regalo-desc">Per poggiare solide basi sotto i nostri piedi.</span></li>
+                <li><span class="regalo-titolo">Un profumo per la casa</span><span class="regalo-desc">Per rendere accogliente ogni stanza del nostro sogno.</span></li>
             </ul>
         </div>
     </section>
 
     <section id="rsvp">
+        <div class="section-divider" style="margin-bottom: 60px;"></div>
         <h2>RSVP</h2>
-        <p style="font-style: italic; margin-bottom: 25px; color: #666;">
+        <p style="font-style: italic; margin-bottom: 25px; color: #666; max-width: 600px; margin-left: auto; margin-right: auto;">
             Amiamo i vostri piccoli, ma per ragioni di logistica e capienza della struttura non riusciamo a garantire spazi e attività per loro. Speriamo che possiate godervi questa giornata di festa "tra grandi" insieme a noi.
         </p>
-        <p>Confermate entro il <strong>30 Maggio</strong>.</p>
+        <p>Vi preghiamo di confermare entro il <strong>30 Maggio</strong>.</p>
         <div style="margin-top: 30px;">
-            <p><strong>Dario:</strong> <a href="tel:+393420492495">342 0492495</a></p>
-            <p><strong>Ludovica:</strong> <a href="tel:+393490651539">349 0651539</a></p>
+            <p><strong>Dario:</strong> <a href="tel:+393420492495" class="contact-link">342 0492495</a></p>
+            <p><strong>Ludovica:</strong> <a href="tel:+393490651539" class="contact-link">349 0651539</a></p>
         </div>
     </section>
 
-    <footer>LUDOVICA & DARIO — 11.07.2026</footer>
+    <footer>
+        LUDOVICA & DARIO — 11.07.2026
+    </footer>
 </div>
+
 </body>
 </html>
