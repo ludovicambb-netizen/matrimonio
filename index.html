@@ -92,13 +92,14 @@
             margin: 0 auto;
         }
 
-        .mappa-img {
+        .mappa-img, .casale-img {
             max-width: 65%;
             height: auto;
             margin: 20px auto;
             display: block;
             border: none !important;
             box-shadow: none !important;
+            mix-blend-mode: multiply;
         }
 
         .info-box {
@@ -142,6 +143,18 @@
             letter-spacing: 1px;
             margin: 10px 5px;
         }
+
+        ul.regali-simbolici {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        ul.regali-simbolici li {
+            margin-bottom: 15px;
+            border-bottom: 1px dotted var(--verde-salvia);
+            padding-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -152,6 +165,7 @@
         <a href="#programma">Sabato</a>
         <a href="#weekend">Weekend</a>
         <a href="#dormire">Dormire</a>
+        <a href="#regali">La Casa</a>
         <a href="#rsvp">RSVP</a>
     </nav>
 
@@ -162,7 +176,7 @@
         <p>Ore 16:30 | Borgo di Elcito</p>
         <div class="divider"></div>
         <p style="font-style: italic; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
-            Ci scambieremo le promesse nella cornice di Elcito con una cerimonia simbolica che celebrerà la nostra unione.
+            Ci scambieremo le promesse nella cornice di Elcito con una cerimonia simbolica che celebrerà la nostra unione, avvenuta formalmente qualche giorno prima.
         </p>
     </section>
 
@@ -236,7 +250,34 @@
         </div>
     </section>
 
+    <section id="regali">
+        <h2>Un sogno da costruire</h2>
+        <p style="max-width: 650px; margin: 0 auto 30px auto;">
+            Mentre celebriamo il nostro amore, stiamo anche dando vita alla nostra futura casa. Stiamo ristrutturando un antico casale tra Elcito e Staffolo, ed è lì che sogniamo di costruire la nostra famiglia.
+        </p>
+        
+        <img src="casale.png" alt="Il nostro casale" class="casale-img">
+        
+        <p style="margin-bottom: 30px; font-weight: 600; color: var(--verde-salvia);">
+            Se desiderate farci un pensiero, ecco come potreste aiutarci simbolicamente:
+        </p>
+
+        <div class="info-box" style="margin-bottom: 40px; background: rgba(255,255,255,0.5);">
+            <ul class="regali-simbolici">
+                <li>🌿 <strong>Un albero di arancio</strong> – Per profumare il nostro nuovo giardino.</li>
+                <li>🔥 <strong>Un mattone del camino</strong> – Per scaldare i nostri inverni in compagnia.</li>
+                <li>✨ <strong>Una luce in giardino</strong> – Per illuminare le nostre cene estive.</li>
+                <li>🧱 <strong>Un metro quadro di cotto</strong> – Per poggiare solide basi alla nostra vita insieme.</li>
+                <li>💜 <strong>Un cespuglio di lavanda</strong> – Per dare il benvenuto a chi ci verrà a trovare.</li>
+            </ul>
+        </div>
+        
+        <p>Qualunque sia la vostra scelta, il vostro pensiero sarà parte della nostra casa:</p>
+        <p style="font-size: 1.1rem; letter-spacing: 1px;"><strong>IBAN:</strong> IT 00 X 00000 00000 000000000000</p>
+    </section>
+
     <section id="rsvp">
+        <div class="section-divider" style="margin-bottom: 60px;"></div>
         <h2>RSVP</h2>
         <p>Vi preghiamo di confermare entro il <strong>30 Maggio</strong>.</p>
         <div style="margin-top: 30px;">
@@ -251,10 +292,6 @@
                 * Data la natura della location e lo stile dell'evento, abbiamo immaginato un ricevimento per soli adulti. Speriamo che possiate godervi questa serata di relax insieme a noi.
             </p>
         </div>
-        <div class="divider" style="margin-top: 60px;"></div>
-        <h2>Lista di Nozze</h2>
-        <p>La vostra presenza è il dono più grande. Se desiderate farci un pensiero:</p>
-        <p><strong>IBAN:</strong> IT 00 X 00000 00000 000000000000</p>
     </section>
 
     <footer style="text-align: center; padding: 40px 0; color: var(--verde-salvia); font-size: 0.9rem;">
