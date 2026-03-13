@@ -32,7 +32,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
-        /* BARRA DI NAVIGAZIONE STICKY CON FOGLIE AGGANCIATE */
         nav {
             background: rgba(244, 241, 234, 0.98);
             padding: 30px 0;
@@ -72,8 +71,10 @@
 
         .corsivo {
             font-family: 'Dancing Script', cursive;
-            font-size: 3.5rem;
+            font-size: 4rem;
             color: var(--verde-salvia);
+            display: block;
+            margin-bottom: 10px;
         }
 
         h2 { text-transform: uppercase; letter-spacing: 2px; color: var(--verde-salvia); margin-top: 0; }
@@ -90,7 +91,6 @@
             text-transform: uppercase;
         }
 
-        /* LISTA ALBERGHI AGGIORNATA */
         .info-box {
             background: white;
             padding: 30px;
@@ -104,7 +104,6 @@
             border-bottom: 1px dotted #e0dbd0;
             padding-bottom: 15px;
         }
-
         .hotel-item:last-child { border-bottom: none; }
 
         .hotel-link {
@@ -112,15 +111,16 @@
             font-weight: 600;
             text-decoration: none;
             font-size: 1.25rem;
-            display: inline-block;
         }
-
-        .hotel-link:hover { text-decoration: underline; }
-
         .hotel-meta { font-size: 0.9rem; color: #777; font-style: italic; }
         .rating { color: #d4af37; font-weight: bold; margin-left: 5px; }
 
-        /* FOGLIE IN BASSO */
+        .regali-simbolici { list-style: none; padding: 0; }
+        .regali-simbolici li { margin-bottom: 20px; border-bottom: 1px dotted var(--verde-salvia); padding-bottom: 10px; }
+        .regali-simbolici li:last-child { border-bottom: none; }
+        .regalo-titolo { display: block; font-weight: 600; color: var(--verde-salvia); font-size: 1.1rem; }
+        .regalo-desc { font-size: 0.9rem; font-style: italic; color: #666; }
+
         .bottom-leaf {
             position: absolute;
             bottom: 0;
@@ -136,6 +136,7 @@
             nav a { margin: 0 4px; font-size: 0.65rem; }
             .nav-leaf { width: 50px; }
             section { padding: 60px 20px; }
+            .corsivo { font-size: 3rem; }
         }
     </style>
 </head>
@@ -156,16 +157,18 @@
             <span class="corsivo">Ludovica & Dario</span>
             <h2>Sabato 11 Luglio 2026</h2>
             <div style="width: 50px; height: 1px; background: var(--verde-salvia); margin: 20px auto;"></div>
-            <p style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Ginevra e Riccardo annunciano il matrimonio dei loro genitori</p>
+            <p style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; max-width: 80%; margin: 0 auto;">Ginevra e Riccardo annunciano il matrimonio dei loro genitori</p>
         </section>
 
         <section id="programma">
             <h2>Il Giorno del Matrimonio</h2>
             <p><strong>16:30</strong> – Cerimonia presso il Borgo di Elcito</p>
-            <a href="https://maps.google.com/?q=Elcito+San+Severino+Marche" target="_blank" class="btn-maps">📍 Mappa Elcito</a>
+            <a href="https://maps.app.goo.gl/uXp5h6G8W9j1K2L3M3" target="_blank" class="btn-maps">📍 Mappa Elcito</a>
             
             <p style="margin-top: 40px;"><strong>18:30</strong> – Ricevimento presso "La Serra" (Staffolo)</p>
-            <a href="https://maps.google.com/?q=La+Serra+Staffolo" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Mappa La Serra</a>
+            <a href="https://maps.app.goo.gl/uXp5h6G8W9j1K2L3M4" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Mappa La Serra</a>
+            
+            <img src="2.png" alt="Mappa" style="max-width: 70%; height: auto; margin-top: 40px; display: block; margin-left: auto; margin-right: auto;">
         </section>
 
         <section id="dormire">
@@ -216,20 +219,29 @@
 
         <section id="regali">
             <h2>Un sogno da costruire</h2>
-            <p style="margin-bottom: 30px;">Stiamo ristrutturando un antico casale tra le colline marchigiane. Se desiderate farci un regalo, ecco come aiutarci simbolicamente:</p>
-            <img src="casale.png" style="width: 100%; max-width: 500px; mix-blend-mode: multiply; margin-bottom: 20px;">
-            <ul style="list-style: none; padding: 0; font-style: italic; color: var(--verde-salvia); line-height: 2;">
-                <li>• Un albero per il giardino •</li>
-                <li>• Un mattone per il camino •</li>
-                <li>• Una luce per la sera •</li>
-            </ul>
+            <p style="margin-bottom: 30px; max-width: 90%; margin-left: auto; margin-right: auto;">
+                Stiamo mettendo le basi per il nostro progetto futuro, ristrutturando un antico casale tra le colline marchigiane: è lì che sogniamo di trascorrere il tempo più bello della nostra vita insieme ai nostri figli e ai nostri cani.
+            </p>
+            <img src="casale.png" style="width: 100%; max-width: 550px; mix-blend-mode: multiply; margin-bottom: 30px;">
+            <p style="margin-bottom: 30px; font-weight: 600; color: var(--verde-salvia);">Se desiderate farci un pensiero, ecco come potreste aiutarci simbolicamente:</p>
+            <div class="info-box" style="background: rgba(255,255,255,0.5);">
+                <ul class="regali-simbolici">
+                    <li><span class="regalo-titolo">Un albero di arancio o di ulivo</span><span class="regalo-desc">Per veder crescere radici forti nel nostro nuovo giardino.</span></li>
+                    <li><span class="regalo-titolo">Un mattone per il grande camino</span><span class="regalo-desc">Per riscaldare i nostri futuri inverni in famiglia.</span></li>
+                    <li><span class="regalo-titolo">Una luce in giardino</span><span class="regalo-desc">Per illuminare le lunghe tavolate delle nostre cene estive.</span></li>
+                    <li><span class="regalo-titolo">Un metro quadro di cotto o pietra</span><span class="regalo-desc">Per poggiare solide basi sotto i nostri piedi.</span></li>
+                    <li><span class="regalo-titolo">Un profumo per la casa</span><span class="regalo-desc">Per rendere accogliente ogni stanza del nostro sogno.</span></li>
+                </ul>
+            </div>
         </section>
 
         <section id="rsvp">
             <h2>RSVP</h2>
-            <p style="margin-bottom: 30px; font-style: italic; color: #666; max-width: 600px; margin: 0 auto 30px auto;">"Amiamo i vostri piccoli, ma abbiamo scelto di celebrare questa giornata in un'atmosfera dedicata ai soli adulti."</p>
+            <p style="font-style: italic; margin-bottom: 30px; color: #666; max-width: 600px; margin: 0 auto 30px auto;">
+                Amiamo i vostri piccoli, ma per ragioni di logistica e capienza della struttura non riusciamo a garantire spazi e attività per loro. Speriamo che possiate godervi questa giornata di festa "tra grandi" insieme a noi.
+            </p>
             <p>Vi preghiamo di confermare entro il <strong>30 Maggio</strong></p>
-            <p style="margin-top: 20px;">Dario: <a href="tel:+393420492495" style="color:var(--verde-salvia); font-weight: 600; text-decoration: none;">342 0492495</a></p>
+            <p style="margin-top: 25px;">Dario: <a href="tel:+393420492495" style="color:var(--verde-salvia); font-weight: 600; text-decoration: none;">342 0492495</a></p>
             <p>Ludovica: <a href="tel:+393490651539" style="color:var(--verde-salvia); font-weight: 600; text-decoration: none;">349 0651539</a></p>
         </section>
 
