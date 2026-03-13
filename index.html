@@ -30,6 +30,8 @@
             width: 100%;
             position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
         }
 
         nav {
@@ -64,7 +66,7 @@
         }
 
         section {
-            padding: 80px 40px;
+            padding: 70px 40px;
             text-align: center;
             scroll-margin-top: 100px;
         }
@@ -74,7 +76,7 @@
             font-size: 4rem;
             color: var(--verde-salvia);
             display: block;
-            margin-bottom: 10px;
+            margin: 15px 0;
         }
 
         h2 { text-transform: uppercase; letter-spacing: 2px; color: var(--verde-salvia); margin-top: 0; }
@@ -127,15 +129,27 @@
             width: 120px;
             mix-blend-mode: multiply;
             pointer-events: none;
+            z-index: 50;
         }
         .b-l { left: 0; transform: scaleY(-1); }
         .b-r { right: 0; transform: rotate(180deg); }
+
+        footer {
+            text-align: center;
+            padding: 60px 40px;
+            color: var(--verde-salvia);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 60;
+            margin-top: auto;
+        }
 
         @media (max-width: 600px) {
             nav { padding: 45px 10px 20px 10px; }
             nav a { margin: 0 4px; font-size: 0.65rem; }
             .nav-leaf { width: 50px; }
-            section { padding: 60px 20px; }
+            section { padding: 50px 20px; }
             .corsivo { font-size: 3rem; }
         }
     </style>
@@ -147,73 +161,64 @@
             <img src="branch.png" class="nav-leaf nav-leaf-left">
             <img src="branch.png" class="nav-leaf nav-leaf-right">
             <a href="#home">Home</a>
-            <a href="#programma">Sabato</a>
+            <a href="#sabato">Sabato</a>
+            <a href="#weekend">Weekend</a>
             <a href="#dormire">Dormire</a>
             <a href="#regali">Sogno</a>
             <a href="#rsvp">RSVP</a>
         </nav>
 
         <section id="home">
+            <p style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; max-width: 80%; margin: 0 auto 20px auto;">Ginevra e Riccardo annunciano il matrimonio dei loro genitori</p>
             <span class="corsivo">Ludovica & Dario</span>
             <h2>Sabato 11 Luglio 2026</h2>
             <div style="width: 50px; height: 1px; background: var(--verde-salvia); margin: 20px auto;"></div>
-            <p style="text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; max-width: 80%; margin: 0 auto;">Ginevra e Riccardo annunciano il matrimonio dei loro genitori</p>
+            <p style="font-style: italic; font-size: 1.2rem; max-width: 600px; margin: 0 auto;">
+                Ci scambieremo le promesse nella cornice di Elcito con una cerimonia simbolica che celebrerà la nostra unione.
+            </p>
         </section>
 
-        <section id="programma">
+        <section id="sabato">
             <h2>Il Giorno del Matrimonio</h2>
             <p><strong>16:30</strong> – Cerimonia presso il Borgo di Elcito</p>
-            <a href="https://maps.app.goo.gl/uXp5h6G8W9j1K2L3M3" target="_blank" class="btn-maps">📍 Mappa Elcito</a>
+            <a href="https://maps.app.goo.gl/uXp5h6G8W9j1K2L3M5" target="_blank" class="btn-maps">📍 Mappa Elcito</a>
             
             <p style="margin-top: 40px;"><strong>18:30</strong> – Ricevimento presso "La Serra" (Staffolo)</p>
-            <a href="https://maps.app.goo.gl/uXp5h6G8W9j1K2L3M4" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Mappa La Serra</a>
+            <a href="https://maps.app.goo.gl/uXp5h6G8W9j1K2L3M6" target="_blank" class="btn-maps" style="background:none; color:var(--verde-salvia); border:1px solid var(--verde-salvia);">📍 Mappa La Serra</a>
             
-            <img src="2.png" alt="Mappa" style="max-width: 70%; height: auto; margin-top: 40px; display: block; margin-left: auto; margin-right: auto;">
+            <img src="2.png" alt="Mappa" style="max-width: 70%; height: auto; margin: 40px auto; display: block;">
+        </section>
+
+        <section id="weekend" style="background-color: #f9f7f2;">
+            <h2>Il Weekend</h2>
+            <p style="font-style: italic; max-width: 650px; margin: 0 auto 30px auto; color: #666;">
+                Per chi ha voglia di trasformare il nostro matrimonio in una piccola vacanza, abbiamo pensato a qualche momento extra da passare insieme, con dettagli ancora da definire.
+            </p>
+            <div style="margin-bottom: 30px;">
+                <span class="corsivo" style="font-size: 2.2rem;">Venerdì 10 Luglio</span>
+                <p><strong>Aperitivo della Sposa</strong> & <strong>Aperitivo dello Sposo</strong></p>
+            </div>
+            <div style="width: 40px; height: 1px; background: var(--verde-salvia); margin: 20px auto; opacity: 0.5;"></div>
+            <div>
+                <span class="corsivo" style="font-size: 2.2rem;">Domenica 12 Luglio</span>
+                <p><strong>Pranzo conviviale presso il Monte San Vicino</strong></p>
+                <p style="margin-top: 15px;">A seguire, per chi lo desidera, possibilità di una passeggiata a cavallo.</p>
+            </div>
         </section>
 
         <section id="dormire">
             <h2>Dove Dormire</h2>
             <div class="info-box">
-                <div class="hotel-item">
-                    <a href="https://www.relaisdelborgo.com/" target="_blank" class="hotel-link">Relais del Borgo</a>
-                    <div class="hotel-meta">Hotel & Spa • 5 min <span class="rating">4.5/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://www.quivoglio.com/" target="_blank" class="hotel-link">Agriturismo Qui Voglio</a>
-                    <div class="hotel-meta">Agriturismo • 10 min <span class="rating">4.9/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://villaverdicchio.com/" target="_blank" class="hotel-link">Villa Verdicchio</a>
-                    <div class="hotel-meta">B&B • 10-15 min <span class="rating">5/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="http://www.ilcasaledellerondini.it/" target="_blank" class="hotel-link">La Casa Delle Rondini</a>
-                    <div class="hotel-meta">B&B • 10 min <span class="rating">4.6/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://www.bedandbreakfast.eu/it/a/FGWIma7y0BJl/bb-la-fonte" target="_blank" class="hotel-link">B&B La Fonte</a>
-                    <div class="hotel-meta">B&B • 15 min <span class="rating">5/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://www.lavecchiafonte.it/" target="_blank" class="hotel-link">La Vecchia Fonte</a>
-                    <div class="hotel-meta">Agriturismo • 15 min <span class="rating">4.9/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://www.lesinante.it/" target="_blank" class="hotel-link">Agriturismo L'esinante</a>
-                    <div class="hotel-meta">Agriturismo • 15 min <span class="rating">4.7/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://www.lacortesullago.it/" target="_blank" class="hotel-link">La Corte Sul Lago</a>
-                    <div class="hotel-meta">Agriturismo • 20 min <span class="rating">4.3/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://collesul.tripcombined.com/" target="_blank" class="hotel-link">Colle Sul Lago</a>
-                    <div class="hotel-meta">Hotel • 20 min <span class="rating">4.5/5</span></div>
-                </div>
-                <div class="hotel-item">
-                    <a href="https://imori.net/" target="_blank" class="hotel-link">Agriturismo I Mori</a>
-                    <div class="hotel-meta">Agriturismo • 20 min <span class="rating">4.8/5</span></div>
-                </div>
+                <div class="hotel-item"><a href="https://www.relaisdelborgo.com/" target="_blank" class="hotel-link">Relais del Borgo</a><div class="hotel-meta">Hotel & Spa • 5 min <span class="rating">4.5/5</span></div></div>
+                <div class="hotel-item"><a href="https://www.quivoglio.com/" target="_blank" class="hotel-link">Agriturismo Qui Voglio</a><div class="hotel-meta">Agriturismo • 10 min <span class="rating">4.9/5</span></div></div>
+                <div class="hotel-item"><a href="https://villaverdicchio.com/" target="_blank" class="hotel-link">Villa Verdicchio</a><div class="hotel-meta">B&B • 10-15 min <span class="rating">5/5</span></div></div>
+                <div class="hotel-item"><a href="http://www.ilcasaledellerondini.it/" target="_blank" class="hotel-link">La Casa Delle Rondini</a><div class="hotel-meta">B&B • 10 min <span class="rating">4.6/5</span></div></div>
+                <div class="hotel-item"><a href="https://www.bedandbreakfast.eu/it/a/FGWIma7y0BJl/bb-la-fonte" target="_blank" class="hotel-link">B&B La Fonte</a><div class="hotel-meta">B&B • 15 min <span class="rating">5/5</span></div></div>
+                <div class="hotel-item"><a href="https://www.lavecchiafonte.it/" target="_blank" class="hotel-link">La Vecchia Fonte</a><div class="hotel-meta">Agriturismo • 15 min <span class="rating">4.9/5</span></div></div>
+                <div class="hotel-item"><a href="https://www.lesinante.it/" target="_blank" class="hotel-link">Agriturismo L'esinante</a><div class="hotel-meta">Agriturismo • 15 min <span class="rating">4.7/5</span></div></div>
+                <div class="hotel-item"><a href="https://www.lacortesullago.it/" target="_blank" class="hotel-link">La Corte Sul Lago</a><div class="hotel-meta">Agriturismo • 20 min <span class="rating">4.3/5</span></div></div>
+                <div class="hotel-item"><a href="https://collesul.tripcombined.com/" target="_blank" class="hotel-link">Colle Sul Lago</a><div class="hotel-meta">Hotel • 20 min <span class="rating">4.5/5</span></div></div>
+                <div class="hotel-item"><a href="https://imori.net/" target="_blank" class="hotel-link">Agriturismo I Mori</a><div class="hotel-meta">Agriturismo • 20 min <span class="rating">4.8/5</span></div></div>
             </div>
         </section>
 
@@ -241,16 +246,16 @@
                 Amiamo i vostri piccoli, ma per ragioni di logistica e capienza della struttura non riusciamo a garantire spazi e attività per loro. Speriamo che possiate godervi questa giornata di festa "tra grandi" insieme a noi.
             </p>
             <p>Vi preghiamo di confermare entro il <strong>30 Maggio</strong></p>
-            <p style="margin-top: 25px;">Dario: <a href="tel:+393420492495" style="color:var(--verde-salvia); font-weight: 600; text-decoration: none;">342 0492495</a></p>
-            <p>Ludovica: <a href="tel:+393490651539" style="color:var(--verde-salvia); font-weight: 600; text-decoration: none;">349 0651539</a></p>
+            <div style="margin-top: 25px;">
+                <p>Dario: <a href="tel:+393420492495" style="color:var(--verde-salvia); font-weight: 600; text-decoration: none;">342 0492495</a></p>
+                <p>Ludovica: <a href="tel:+393490651539" style="color:var(--verde-salvia); font-weight: 600; text-decoration: none;">349 0651539</a></p>
+            </div>
         </section>
 
         <img src="branch.png" class="bottom-leaf b-l">
         <img src="branch.png" class="bottom-leaf b-r">
 
-        <footer style="padding: 40px; font-size: 0.8rem; opacity: 0.5;">
-            LUDOVICA & DARIO — 11.07.2026
-        </footer>
+        <footer>LUDOVICA & DARIO — 11.07.2026</footer>
     </div>
 </body>
 </html>
