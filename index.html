@@ -298,7 +298,7 @@
             </div>
         </section>
 
-      <style>
+    <style>
     /* Griglia per i blocchi sogno */
     .griglia-sogni {
         display: grid;
@@ -312,6 +312,9 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease;
     }
 
     .cornice-immagine {
@@ -332,7 +335,11 @@
     }
 
     .blocco-sogno:hover img {
-        transform: scale(1.05);
+        transform: scale(1.08);
+    }
+    
+    .blocco-sogno:hover .titolo-regalo {
+        color: #5a6b56;
     }
 
     .titolo-regalo {
@@ -353,7 +360,6 @@
         padding: 0 10px;
     }
 
-    /* Forziamo 3 o 4 colonne su desktop */
     @media (min-width: 768px) {
         .griglia-sogni { grid-template-columns: repeat(3, 1fr); }
     }
@@ -371,79 +377,84 @@
 
     <div class="griglia-sogni">
         
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Un%20albero%20di%20ulivo&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Ulivo.png" alt="Ulivo"></div>
             <span class="titolo-regalo">Un albero di arancio o di ulivo</span>
             <span class="desc-regalo">Per veder crescere radici forti nel nostro nuovo giardino.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Una%20distesa%20di%20ginestre&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Ginestre.png" alt="Ginestre"></div>
             <span class="titolo-regalo">Una distesa di ginestre gialle</span>
             <span class="desc-regalo">Per colorare la collina e profumare l'aria delle nostre estati.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Il%20grande%20porticato&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Porticato.png" alt="Porticato"></div>
             <span class="titolo-regalo">Il grande porticato</span>
             <span class="desc-regalo">Uno spazio d'ombra per i pomeriggi di relax e le letture all'aperto.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Il%20barbecue%20in%20muratura&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Barbecue.png" alt="Barbecue"></div>
             <span class="titolo-regalo">Il barbecue in muratura</span>
             <span class="desc-regalo">Per accendere il fuoco delle domeniche trascorse insieme agli amici.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Un%20tassello%20della%20piscina&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Piscina.png" alt="Piscina"></div>
             <span class="titolo-regalo">Un tuffo nel blu</span>
             <span class="desc-regalo">Un tassello della nostra piscina tra l'acqua e il cielo delle Marche.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Luci%20in%20giardino&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Luci.png" alt="Luci"></div>
             <span class="titolo-regalo">Una luce in giardino</span>
             <span class="desc-regalo">Per illuminare le lunghe tavolate delle nostre cene estive.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Restauro%20travi%20antiche&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Travi.png" alt="Travi"></div>
             <span class="titolo-regalo">Il restauro delle travi antiche</span>
             <span class="desc-regalo">Per preservare il fascino e la storia del legno che ci proteggerà.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Mattone%20per%20il%20camino&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Camino.png" alt="Camino"></div>
             <span class="titolo-regalo">Un mattone per il grande camino</span>
             <span class="desc-regalo">Per riscaldare i nostri futuri inverni in famiglia.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Finestra%20sulle%20colline&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Finestra.png" alt="Finestra"></div>
             <span class="titolo-regalo">Una finestra verso le colline</span>
             <span class="desc-regalo">Per incorniciare la bellezza della natura in ogni stanza.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Un%20metro%20quadro%20di%20prato&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Erba.png" alt="Prato"></div>
             <span class="titolo-regalo">Un metro quadro di prato</span>
             <span class="desc-regalo">Per le corse dei bambini e i giochi dei nostri cani.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Una%20panca%20sotto%20l'albero&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Panca.png" alt="Panca"></div>
             <span class="titolo-regalo">Una panca sotto l'albero</span>
             <span class="desc-regalo">Per i momenti di silenzio e per guardare insieme l'orizzonte.</span>
-        </div>
+        </a>
 
-        <div class="blocco-sogno">
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=ludovica.barontini@gmail.com&item_name=Il%20grande%20tavolo&currency_code=EUR" target="_blank" class="blocco-sogno">
             <div class="cornice-immagine"><img src="Tavolo.png" alt="Tavolo"></div>
             <span class="titolo-regalo">Il grande tavolo in cucina</span>
             <span class="desc-regalo">Per accogliere tutti voi e condividere i pranzi più belli.</span>
-        </div>
+        </a>
 
     </div>
+    
+    <p style="margin-top: 40px; font-size: 0.8rem; color: #999; text-align: center; font-style: italic;">
+        Cliccando sulle immagini potrai scegliere l'importo del tuo pensiero speciale.<br>
+        È possibile partecipare sia tramite conto PayPal che con carta di credito.
+    </p>
 </section>
         <section id="rsvp">
             <div class="divider-verde"></div>
