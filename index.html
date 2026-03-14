@@ -168,22 +168,28 @@
             section { padding: 50px 20px; }
         }
 
-        @media (max-width: 480px) {
-            /* Modifica specifica per i nomi degli sposi e titoli h2 su mobile */
-            h1, h2, .corsivo, .nome-sposi { 
-                font-size: 10vw !important; /* Ridimensiona dinamicamente */
+  @media (max-width: 480px) {
+            /* Colpiamo SOLO i nomi degli sposi */
+            .corsivo { 
+                font-size: 11vw !important; /* Dimensione perfetta per i nomi su mobile */
                 white-space: nowrap !important; 
                 display: block !important;
                 width: 100% !important;
                 text-align: center !important;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                padding: 0 !important;
+                margin: 10px 0 !important;
             }
 
-            /* Recuperiamo spazio dai lati della cornice principale */
+            /* Ripristiniamo gli h2 normali così non "esplodono" */
+            h2 {
+                font-size: 1.2rem !important; 
+                white-space: normal !important; /* Permette agli altri titoli di andare a capo se serve */
+                letter-spacing: 2px !important;
+            }
+
+            /* Sistemiamo il contenitore per non tagliare i bordi */
             .main-container {
-                padding: 0 5px !important;
+                width: 95% !important;
+                margin: 0 auto !important;
             }
         }
     </style>
