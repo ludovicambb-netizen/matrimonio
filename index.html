@@ -191,21 +191,32 @@
                 width: 95% !important;
                 margin: 0 auto 40px auto !important; /* Aggiunto 40px in fondo per staccare la cornice dal bordo del telefono */
             }
-        /* --- AGGIUNGI DA QUI --- */
-       footer {
-                padding: 100px 20px 60px 20px !important; /* Aumentato molto il padding per sollevare il testo */
-                font-size: 0.7rem !important;
-                letter-spacing: 1px !important;
+     /* Sistemiamo il footer per mobile */
+            footer {
+                padding: 100px 20px 80px 20px !important; /* Molto spazio sopra e sotto */
+                min-height: 200px !important; /* Forza l'altezza minima della sezione */
+                font-size: 0.75rem !important; 
                 display: flex !important;
                 flex-direction: column !important;
+                justify-content: center !important;
                 align-items: center !important;
+                position: relative !important; /* Importante per le foglie */
+            }
 
+            /* Posizioniamo le foglie in modo che non tocchino il testo */
             .bottom-leaf {
                 width: 80px !important; 
-                bottom: 0px !important;
+                position: absolute !important;
+                bottom: 10px !important; /* Distanza dal bordo inferiore */
             }
-            /* --- A QUI --- */
-        } /* Questa chiude il @media */
+            
+            .b-l { left: 5px !important; }
+            .b-r { right: 5px !important; }
+
+            /* Diamo respiro alla cornice finale */
+            .main-container {
+                margin-bottom: 50px !important;
+            }
     </style>
 </head>
 <body>
